@@ -1,31 +1,42 @@
 <html ng-app="frontend">
 <head>
+
 	<meta charset="utf8"></meta>
 	<title> {{ page_title }} </title>
 
 	<!-- Cascading Style Sheets of various vendors -->
-	<link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap.min.css" />
+
+	<!-- Custom Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="app/css/custom_style.css" />
+
 </head>
 <body>
+
 	<!-- Inject views from different states(ui-router) -->
-	<div ui-view></div>
+		<div ui-view></div>
 
 	<!-- Including JavaScript files, vendors provided -->
 
+		<!-- Angular vendors provided files -->
+			<script type="text/javascript" src="vendors/js/angular/angular.min.js"></script>
+			<script type="text/javascript" src="vendors/js/angular/agular-ui-router.min.js"></script>
+
 	<!-- Angular main app files -->
-	<script type="text/javascript" src="app/js/app.js"></script>
+		<script type="text/javascript" src="app/js/app.js"></script>
 
 	<!-- Angular Constants -->
-	<span ng-include="'app/js/constants/index.html'"></span>
+		<span ng-include="'app/js/constants/index.html'"></span>
 
 	<!-- Angular directives -->
-	<span ng-include="'app/js/directories/index.html'"></span>
+		<span ng-include="'app/js/directories/index.html'"></span>
 
 	<!-- Angular factories -->
-	<span ng-include="'app/js/factories/index.html'"></span>
+		<span ng-include="'app/js/factories/index.html'"></span>
 
 	<!-- Angular controllers -->
-	<span ng-include="'app/js/controllers/index.html'"></span>
+		<span ng-include="'app/js/controllers/index.html'"></span>
 	
+
 </body>
 </html>
